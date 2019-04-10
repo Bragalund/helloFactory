@@ -4,12 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
+        if(args.length < 1){
+            System.out.println("Error! Please provide an argument.");
+        }
         if(args[0].equals("1")){
-
-        }else if(args[1].equals("2")){
-
-        }else if(args[2].equals("3")){
-
+            System.out.println("You provided argument 1!");
+        }else if(args[0].equals("2")){
+            System.out.println("You provided argument 2!");
+        }else if(args[0].equals("3")){
+            System.out.println("You provided argument 3!");
         }else{
             System.out.println("Supplied wrong input! Pleas choose 1,2 or 3");
         }
