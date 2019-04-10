@@ -3,7 +3,7 @@ package no.bragalund;
 public class ArgumentFactory {
     public AbstractArgument createArgumentBasedOnInput(String[] args){
 
-        if(inputArgsIsValid(args)){
+        if(hasProvidedInput(args)){
             String input = args[0];
             switch (input){
                 case "1":
@@ -17,13 +17,16 @@ public class ArgumentFactory {
                     break;
             }
         }
-
         throw new IllegalArgumentException("You should pass in 1, 2 or 3 as arguments!");
     }
 
-    private boolean inputArgsIsValid(String[] args){
+    private boolean hasProvidedInput(String[] args){
         if(args == null || args.length < 1){
- return false;       }
+
+            return false;
+
+        }
+
        return true;
     }
 
