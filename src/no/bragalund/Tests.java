@@ -39,7 +39,7 @@ public class Tests {
         main.main(commandlineArgs);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testWrongArgumentsShouldGiveHelpMessage(){
 
         // Arrange
